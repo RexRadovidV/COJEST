@@ -10,6 +10,7 @@ public class SecondTest {
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         driver.get("https://seleniumdemo.com");
+        System.out.println("elko");
 
     }
 }
