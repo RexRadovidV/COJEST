@@ -16,6 +16,7 @@ public class ImageTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get("https://testeroprogramowania.github.io/selenium/image.html");
+        System.out.println("xd");
 
         WebElement image=driver.findElement(By.tagName("img"));
         String height=image.getAttribute("naturalHeight");
