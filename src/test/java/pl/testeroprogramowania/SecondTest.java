@@ -18,8 +18,7 @@ public class SecondTest extends BaseTest {
     WebDriver driver;
     @Test @Ignore
     public void firstTest() throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
+        driver=DriverFactory.getDriver();
         driver.get("https://testeroprogramowania.github.io/selenium/wait2.html");
 
         driver.findElement(By.id("clickOnMe")).click();

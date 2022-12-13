@@ -24,7 +24,7 @@ public class UploadFileTest {
 
         TakesScreenshot screenshot= (TakesScreenshot) driver;
         File srcFile=screenshot.getScreenshotAs(OutputType.FILE);
-        String fileName="beforeUpload"+randomNumber+".png";
+        String fileName="beforeUpl"+randomNumber+".png";
         FileUtils.copyFile(srcFile,new File("src/test/resources/"+fileName ));
 
         Actions actions=new Actions(driver);

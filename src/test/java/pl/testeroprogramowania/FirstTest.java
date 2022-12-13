@@ -19,8 +19,7 @@ public class FirstTest extends BaseTest {
     WebDriver driver;
     @Test
     public void firstTest() throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
-         driver=new ChromeDriver();
+        driver=DriverFactory.getDriver();
         driver.get("https://testeroprogramowania.github.io/selenium/wait2.html");
 
         driver.findElement(By.id("clickOnMe")).click();
@@ -39,7 +38,7 @@ public class FirstTest extends BaseTest {
         softAssert.assertEquals(para.getText(),"Dopiero się pojawiłem!");
 
         waitForElementToExist(By.cssSelector("p"));
-        driver.quit();
+
         softAssert.assertAll();
     }
 
